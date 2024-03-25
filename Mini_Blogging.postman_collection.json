@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "8166f2db-796f-4368-8d08-30b6c97f4515",
+		"name": "Mini_Blogging",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25782691"
+	},
+	"item": [
+		{
+			"name": "api/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "alaa",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "alaa.naasser.b@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Aa@891200",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "Aa@891200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/login?email=alaa.naasser.b@gmail.com&password=Aa@891200",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "alaa.naasser.b@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "Aa@891200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auth/logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTcxMTI4MTg5MSwiZXhwIjoxNzExMjgyMDYzLCJuYmYiOjE3MTEyODE5NDMsImp0aSI6ImRkR2NqMm1wTU51M3lNdm0iLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.T4nUo9iVTFv7ee_enGIleeh-lJLvzwz3mvqvuw8Gw30",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/auth/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
